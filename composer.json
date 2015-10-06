@@ -14,7 +14,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Zapoyok\\ExtraformBundle\\": "src"
+            "Zapoyok\\ExtraFormBundle\\": "src"
         }
     },
     "require": {
