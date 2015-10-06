@@ -1,0 +1,13 @@
+.zapoyok-extraform-keyvalue--row .form-group,
+.zapoyok-extraform-keyvalue--row .form-group > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.zapoyok-extraform-keyvalue--row .form-group label {
+    display: none;
+}
+.zapoyok-extraform-keyvalue--row .form-group .form-group  label {
+    display: inline-block;
+    margin:0 10px;
+}

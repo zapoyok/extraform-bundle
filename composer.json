@@ -1,0 +1,28 @@
+{
+    "name": "zapoyok/extraform-bundle",
+    "description": "Additional widgets (Forms)",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "FIX Jérôme",
+            "email": "jerome.fix@zapoyok.info"
+        }
+    ],
+    "keywords": [],
+    "license": [
+        "Apache-2.0"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Zapoyok\\ExtraformBundle\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=5.4"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

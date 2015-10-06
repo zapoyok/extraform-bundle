@@ -1,0 +1,37 @@
+
+{% extends 'SonataAdminBundle:Form:form_admin_fields.html.twig' %}
+
+{% block zapoyok_extraform_key_value_widget_row %}
+{% spaceless %}
+
+        <div class="sonata-collection-row zapoyok-extraform-keyvalue--row">
+            {% if allow_delete %}
+                <a href="#" class="btn sonata-collection-delete"><i class="fa fa-minus-circle"></i></a>
+            {% endif %}
+            {#{ form_label(child.key) }}{{ form_widget(child.key) }}
+            {{ form_label(child.value) }}{{ form_widget(child.value) }#}
+            {{ form_row(child) }}
+        </div>
+{% endspaceless %}
+{% endblock zapoyok_extraform_key_value_widget_row %}
+
+{% block zapoyok_extraform_key_value_widget %}
+{% spaceless %}
+    {% if prototype is defined %}
+        {% set child = prototype %}
+        {% set attr = attr|merge({'data-prototype': block('zapoyok_extraform_key_value_widget_row'), 'data-prototype-name': prototype.vars.name, 'class': attr.class|default('') }) %}
+    {% endif %}
+    <div {{ block('widget_container_attributes') }}>
+        {{ form_errors(form) }}
+
+        {% for child in form %}
+            {{ block('zapoyok_extraform_key_value_widget_row') }}
+        {% endfor %}
+
+        {{ form_rest(form) }}
+        {% if allow_add %}
+            <div><a href="#" class="btn sonata-collection-add"><i class="fa fa-plus-circle"></i></a></div>
+        {% endif %}
+    </div>
+{% endspaceless %}
+{% endblock zapoyok_extraform_key_value_widget %}
